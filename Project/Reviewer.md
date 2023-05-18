@@ -23,7 +23,7 @@ print('훈렵집합과 테스트집합의 정답(label)값의 shape\n',y_train.s
 ```
 주석으로 알맞게 코드를 설명해줘서 이해하기에 편하였습니다.
 
-* [x] 코드가 에러를 유발할 가능성이 있나요?
+* [v] 코드가 에러를 유발할 가능성이 있나요?
 
 * [o] 코드 작성자가 코드를 제대로 이해하고 작성했나요? (직접 인터뷰해보기)
 
@@ -48,11 +48,11 @@ model.fit(X_train, y_train) # 모델 학습하기
 ```
 주석으로 알맞게 코드를 설명해줘서 이해하기에 편하였습니다.
 
-* [x] 코드가 에러를 유발할 가능성이 있나요?
+* [v] 코드가 에러를 유발할 가능성이 있나요?
 
 * [o] 코드 작성자가 코드를 제대로 이해하고 작성했나요? (직접 인터뷰해보기)
 
-* [x] 코드가 간결한가요
+* [v] 코드가 간결한가요
 ``` python
 train_df = train_df.drop('casual',axis = 'columns') # 미등록 사용자 대여수
 train_df = train_df.drop('registered',axis = 'columns') # 등록 사용자 대여수
@@ -61,7 +61,7 @@ train_df = train_df.drop('second',axis = 'columns') # 모두 0
 train_df = train_df.drop('minute',axis = 'columns') # 모두 0
 train_df = train_df.drop('count',axis = 'columns') # 정답 데이터
 ```
-위 코드를 한줄로 표현 할 수 있습니다. 
+ 위 코드를 한줄로 표현 할 수 있습니다. 
 ``` python
 train_df = train_df.drop(['datetime', 'casual', 'registered', 'count'], axis=1)
 ```
