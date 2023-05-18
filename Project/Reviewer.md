@@ -8,6 +8,13 @@
 **PRT(PeerReviewTemplate)**
 
 * [o] 코드가 정상적으로 동작하고 주어진 문제를 해결했나요? 
+``` python
+test_pred = model(X_test, W, b)
+test_mse = MSE(test_pred,y_test)
+
+print("test데이터의 MSE값은 : ",test_mse)
+```
+test데이터의 MSE값은 :  2839.6180205127453
 
 * [o] 주석을 보고 작성자의 코드가 이해되었나요?
 ``` python
@@ -24,11 +31,12 @@ print('훈렵집합과 테스트집합의 정답(label)값의 shape\n',y_train.s
 주석으로 알맞게 코드를 설명해줘서 이해하기에 편하였습니다.
 
 * [v] 코드가 에러를 유발할 가능성이 있나요?
+    + 없습니다.
 
 * [o] 코드 작성자가 코드를 제대로 이해하고 작성했나요? (직접 인터뷰해보기)
-
+    + 해당 프로젝트의 진행사항을 모두 이해하고 있었습니다.
 * [o] 코드가 간결한가요?
-
+    + clean한 코드 작성이였습니다.
 
 ----------------------------------------------
 참고 링크 및 코드 개선
@@ -40,6 +48,17 @@ print('훈렵집합과 테스트집합의 정답(label)값의 shape\n',y_train.s
 **PRT(PeerReviewTemplate)**
 
 * [o] 코드가 정상적으로 동작하고 주어진 문제를 해결했나요? 
+```python
+from sklearn.metrics import mean_squared_error
+
+test_pred = model.predict(X_test)
+MSE = mean_squared_error(test_pred, y_test)
+RMSE = MSE**0.5
+
+print(f" MSE 오차는 : {MSE}\n RMSE 오차는 : {RMSE}")
+```
+ MSE 오차는 : 20619.64878501189
+ RMSE 오차는 : 143.5954344156244
 
 * [o] 주석을 보고 작성자의 코드가 이해되었나요?
 ``` python
@@ -49,9 +68,9 @@ model.fit(X_train, y_train) # 모델 학습하기
 주석으로 알맞게 코드를 설명해줘서 이해하기에 편하였습니다.
 
 * [v] 코드가 에러를 유발할 가능성이 있나요?
-
+    + 없습니다.
 * [o] 코드 작성자가 코드를 제대로 이해하고 작성했나요? (직접 인터뷰해보기)
-
+    + 해당 프로젝트의 진행사항을 모두 이해하고 있었습니다.
 * [v] 코드가 간결한가요
 ``` python
 train_df = train_df.drop('casual',axis = 'columns') # 미등록 사용자 대여수
