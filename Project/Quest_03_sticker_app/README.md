@@ -72,14 +72,30 @@ def My_sticker_app(image,img_sticker,landmark_predictor,img_Transparency = 0.7, 
 
 ### **[o] 코드 작성자가 코드를 제대로 이해하고 작성했나요?** (직접 인터뷰해보기)
    - 모두 이해하고 작성했습니다.
-### **[x] 코드가 간결한가요?**
-   - ``` detector_hog = dlib.get_frontal_face_detector() ``` 이 부분이 함수 안에 있어 함수 호출시 마다 모델을 메모리에 로드 하는 작업이 발생합니다.
-   - 위 부분을 함수 밖으로 빼내어 함수 사용시에 이미 로드된 detector를 이용하면 불필요한 메모리 사용을 방지하고 실행속도를 올릴 수 있을 것입니다.
+### **[o] 코드가 간결한가요?**
+```python
+# 이미지들 저장
+images = {}
+for img_name in os.listdir(my_image_path):
+    if img_name == '.ipynb_checkpoints': # 주피터 노트북에서 자동저장을 위해 사용되는 폴더 삭제.
+        os.rmdir(my_image_path + img_name)
+    image_path = my_image_path + img_name
+    face_image = cv2.imread(image_path)
+    images[img_name[:-4]] = face_image
+    
+    plt.imshow(cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB))
+    plt.title(img_name[:-4])
+    plt.show()
+origin_images = images.copy()
+```
+   - 위와 같이 사용할 이미지들을 미리 리스트에 저장 후 사용하여 코드를 좀 더 깔끔하게 작성되었습니다.
 
 ----------------------------------------------
 ### **참고 링크 및 코드 개선**
 * 코드 리뷰 시 참고한 링크가 있다면 링크와 간략한 설명을 첨부합니다.
    - gpt와 직접 실험을 통해 ``` detector_hog = dlib.get_frontal_face_detector() ```의 실행 속도등을 확인 하였습니다.
 * 코드 리뷰를 통해 개선한 코드가 있다면 코드와 간략한 설명을 첨부합니다.
+   - ``` detector_hog = dlib.get_frontal_face_detector() ``` 이 부분이 함수 안에 있어 함수 호출시 마다 모델을 메모리에 로드 하는 작업이 발생합니다.
+   - 위 부분을 함수 밖으로 빼내어 함수 사용시에 이미 로드된 detector를 이용하면 불필요한 메모리 사용을 방지하고 실행속도를 올릴 수 있을 것입니다.
 
 ----------------------------------------------
