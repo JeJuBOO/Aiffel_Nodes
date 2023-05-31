@@ -7,13 +7,14 @@
 ## **PRT(PeerReviewTemplate)**
 
 ### **[⭕] 코드가 정상적으로 동작하고 주어진 문제를 해결했나요?**
-  -모든 코드가 정상적으로 동작하고 질답이 잘 진행되었습니다
-  <img width="255" alt="image" src="https://github.com/JeJuBOO/Aiffel_Nodes/assets/94978101/deafbca6-a827-48f2-b6b3-0e78ae6af131">
+  - 모든 코드가 정상적으로 동작하고 질답이 잘 진행되었습니다   
+  
+   <img width="255" alt="image" src="https://github.com/JeJuBOO/Aiffel_Nodes/assets/94978101/deafbca6-a827-48f2-b6b3-0e78ae6af131">
 
 ### **[⭕] 주석을 보고 작성자의 코드가 이해되었나요?**
-  -참고자료들을 링크해주고 중요한 부분들에 주석을 잘 달았습니다
+  -참고자료들을 링크해주고 중요한 부분들에 주석을 잘 달았습니다   
  <img width="383" alt="image" src="https://github.com/JeJuBOO/Aiffel_Nodes/assets/94978101/5432c066-5ca0-4d99-b060-07d9dde89551">
-```
+```python
 def preprocess_sentence(sentence):
     # 문장의 앞뒤 공백을 제거
     sentence = sentence.strip()
@@ -38,7 +39,7 @@ def preprocess_sentence(sentence):
   -코드를 잘 이해했습니다
 
 ### **[⭕] 코드가 간결한가요?**
-```
+```python
   - #질문과 답변의 쌍인 데이터셋을 구성하기 위한 데이터 로드 함수
 def load_conversations(data):
     # Q의 중복되는 문장 제거.
@@ -54,7 +55,7 @@ def load_conversations(data):
 ### **참고 링크 및 코드 개선**
 * 코드 리뷰 시 참고한 링크가 있다면 링크와 간략한 설명을 첨부합니다.
 * 코드 리뷰를 통해 개선한 코드가 있다면 코드와 간략한 설명을 첨부합니다.
-```
+```python
 # 질문과 답변의 쌍인 데이터셋을 구성하기 위한 데이터 로드 함수
 def load_conversations(data):
     # Q의 중복되는 문장 제거.
