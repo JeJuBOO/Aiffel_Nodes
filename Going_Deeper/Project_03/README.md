@@ -14,13 +14,15 @@
 |3. 인식결과의 시각화 및 성능 분석을 적절히 수행하였는가?|CAM과 Grad-CAM 각각에 대해 원본이미지합성, 바운딩박스, IoU 계산 과정을 통해 CAM과 Grad-CAM의 object localization 성능이 비교분석되었다.| O |
 
 시각화를 통해 수렴 결과를 확인할 수 있었습니다.  
-![]('https://camo.githubusercontent.com/8b08a05ba34eb112585f75d93d5f0f6b012505a2902a8c116bb9448233dc16d1/68747470733a2f2f6769746875622e636f6d2f4a654a75424f4f2f41696666656c5f4e6f6465732f6173736574732f37313333323030352f30303835643830312d393137382d343636632d393836652d616237613330386135333333')  
+![]('![image](https://github.com/JeJuBOO/Aiffel_Nodes/assets/126870709/522e7e08-c4bf-4215-96d1-2f28e359e51b)
+')  
 레이어별로 CAM이 출력되었고, 강아지에 해당하는 부분이 활성화 된 것으로 보여집니다.    
 ![]('![image](https://github.com/JeJuBOO/Aiffel_Nodes/assets/126870709/c027c9f7-1149-4832-9de2-7e1f18795a2d)
 ')
 
 CAM과 Grad-CAM의 IoU 계산을 통해 성능을 비교할 수 있었고, 탐지 부분을 시각화하여 보여주셨습니다.   
-![]('https://camo.githubusercontent.com/72d85ab7561510cd8dbb58eb52b7b48b67e6011507d0583f514bd0983d09f375/68747470733a2f2f6769746875622e636f6d2f4a654a75424f4f2f41696666656c5f4e6f6465732f6173736574732f37313333323030352f30383364366463612d393764342d346362362d613263652d653433343630666332646166')
+![]('![image](https://github.com/JeJuBOO/Aiffel_Nodes/assets/126870709/f3485a78-bdf0-4a21-9d7a-366cfee98f81)
+')
 
 ### **[⭕] 주석을 보고 작성자의 코드가 이해되었나요?**
 네 CAM 구현의 과정별로 이해가 잘 되었습니다.
